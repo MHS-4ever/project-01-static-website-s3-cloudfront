@@ -72,4 +72,4 @@ project-01-static-website-s3-cloudfront/
 *   **Resume Ready:** Successfully implemented a project that balances cost-efficiency with performance.
 
 ## 🔐 Security Note
-*For the purpose of this learning lab, the bucket uses a **Public Read Policy**. In a strict production environment, I recommend using **CloudFront Origin Access Control (OAC)** to keep the S3 bucket completely private, ensuring users can only access content through the CDN.*
+*For the purpose of this learning lab, the bucket uses a **Public Read Policy**. In a strict production environment, I recommend using **CloudFront Origin Access Control (OAC)** to keep the S3 bucket completely private, ensuring users can only access content through the CDN. This bucket contains only public static assets and no sensitive or user-generated data.*
