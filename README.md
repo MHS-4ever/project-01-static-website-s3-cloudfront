@@ -27,9 +27,18 @@ A Unity WebGL build was used as the static asset set to simulate a real-world, a
 
 ![Architecture Diagram](architecture/s3-cloudfront-architecture.png)
 
-**Request Flow:**
-```
-User Browser → CloudFront Edge Location → Amazon S3 (Origin)
+```mermaid
+flowchart LR
+    User[User Browser]
+    CF[CloudFront CDN<br/>Global Edge Locations]
+    S3[S3 Bucket<br/>Static Assets]
+    
+    User -->|HTTP/HTTPS Request| CF
+    CF -->|Origin Request| S3
+    CF -->|Cached Content| User
+    
+    style CF fill:#FF9900
+    style S3 fill:#569A31
 ```
 
 **Components:**
